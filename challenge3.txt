@@ -1,0 +1,7 @@
+# the effect of graduating college on the minimum wage 
+
+
+val1=$(grep -v "gender" wages.csv | tr "," " " | cut -f 3,4 -d " " | grep -w "12" | sort -n -k 2 | head -1 | cut -d " " -f 2)
+val2=$(grep -v "gender" wages.csv | tr "," " " | cut -f 3,4 -d " " | grep -w "16" | sort -n -k 2 | head -1 | cut -f 2 -d " ")
+
+echo "$val1 - $val2" | bc
