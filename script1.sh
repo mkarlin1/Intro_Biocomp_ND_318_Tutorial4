@@ -1,0 +1,1 @@
+cat wages.csv | sed 's/,/ /g' | cut -d ' ' -f 1,2 | sed '1d' | sort -k1,1 -k2,2n > gender_yearsExperience.txt
